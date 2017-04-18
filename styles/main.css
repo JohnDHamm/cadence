@@ -1,3 +1,81 @@
-p {
-	color: blue;
+#wholeScreen {
+	/*border: 1px gray solid;*/
+	width: calc(100vw - 20px);
+	height: calc(100vh - 20px);
+	position: relative;
+	margin: 10px;
 }
+
+#groupDiv {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: red;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%
+}
+
+.groupIcon {
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+}
+
+#counterDivBG {
+	position: absolute;
+	top: calc(50% - 50vw);
+	left: 5px;
+	background: black;
+	width: calc(100vw - 30px);
+	height: calc(100vw - 30px);
+	border-radius: 50%;
+	z-index: -1;
+}
+
+#counterDiv {
+	position: absolute;
+	top: calc(50% - 50vw);
+	left: 5px;
+	background: transparent;
+	border: 1px red solid;
+	width: calc(100vw - 30px);
+	height: calc(100vw - 30px);
+	border-radius: 50%;
+	z-index: 8;
+}
+
+#cadenceValues {
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+}
+
+h4.readout {
+	margin: 0;
+	color: #fff;
+}
+
+#athleteName {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+}
+
+p.name {
+	color: yellow;
+	font-size: 1.2rem;
+}
+
+#resultsDiv {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background: blue;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%
+}
+

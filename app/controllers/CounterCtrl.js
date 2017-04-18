@@ -2,8 +2,12 @@
 
 app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
-	$scope.test = "testing scope";
-	console.log("ctrl working");
+	$scope.currentAthlete = "Wellington"
+	$scope.readout = "0.25s / 120 rpm";
+
+	$scope.clicked = () => {
+		console.log("clicked!");
+	}
 
 
 });
