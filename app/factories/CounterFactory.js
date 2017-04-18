@@ -2,8 +2,10 @@
 
 app.factory("CounterFactory", function($q) {
 
-	console.log("factory working");
+	const getTime = () => {
+		return Date.now();
+	}
 
-	return {}
+	return { getTime }
 
 });

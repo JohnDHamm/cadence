@@ -24,7 +24,7 @@
 
 #counterDivBG {
 	position: absolute;
-	top: calc(50% - 50vw);
+	top: calc(50% - 50vw + 10px);
 	left: 5px;
 	background: black;
 	width: calc(100vw - 30px);
@@ -35,7 +35,7 @@
 
 #counterDiv {
 	position: absolute;
-	top: calc(50% - 50vw);
+	top: calc(50% - 50vw + 10px);
 	left: 5px;
 	background: transparent;
 	border: 1px red solid;
