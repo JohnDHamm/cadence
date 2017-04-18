@@ -9,22 +9,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 	<link rel="stylesheet" href="/styles/main.css">
 </head>
-<body>
-	<p>hello</p>
-	<div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+<body ng-app="CadenceApp">
+
+	<div ng-view></div>
 
 
 
+	<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/bower_components/ngstorage/ngStorage.min.js"></script>
 
-
-
-
-
-
-
-
-
-
+	<script type="text/javascript" src="app/app.js"></script>
+	<!-- FACTORIES SECOND -->
+	<script type="text/javascript" src="app/factories/CounterFactory.js"></script>
+	<!-- CONTROLLERS LAST -->
+	<script type="text/javascript" src="app/controllers/CounterCtrl.js"></script>
 
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
