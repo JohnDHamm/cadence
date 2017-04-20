@@ -31,7 +31,7 @@
 	</div>
 
 	<div id="athleteList" ng-show="showAthleteList">
-		<div class="athleteCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete)">{{athlete}}
+		<div class="athleteCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}}
 		</div>
 	</div>
 

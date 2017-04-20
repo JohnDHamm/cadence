@@ -2,12 +2,19 @@
 
 app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
-	const readout = document.getElementById('readoutText');
+	// const readout = document.getElementById('readoutText');
 	const counterDiv = document.getElementById('counterDiv');
 
-	$scope.athletes = ["Clara", "Lucy", "Makenna", "Maya", "Miles", "Trinity", "Wellington"];
-	$scope.currentAthlete = "Wellington";
-	$scope.showAthleteList = false;
+	$scope.athletes = [{id: 0, name: "Clara"},
+											{id: 1, name: "Lucy"},
+											{id: 2, name: "Makenna"},
+											{id: 3, name: "Maya"},
+											{id: 4, name: "Miles"},
+											{id: 5, name: "Trinity"},
+											{id: 6, name: "Ruth"},
+											{id: 7, name: "Wellington"}];
+	// $scope.currentAthlete = "Wellington";
+	$scope.showAthleteList = true;
 	$scope.avgSecond = '0.00';
 	$scope.avgRPM = 0;
 	let prevTap = 0,
@@ -43,11 +50,11 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.showAthletes = () => {
 		$scope.showAthleteList = true;
-		console.log("clicked group");
 	}
 
 	$scope.selectAthlete = (index) => {
-		console.log("index", index);
+		$scope.currentAthlete = $scope.athletes[index].name;
+		$scope.showAthleteList = false;
 	}
 
 
