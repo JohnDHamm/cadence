@@ -120,7 +120,22 @@ p.name {
 
 
 /*RESULTS*/
+#resultList {
+	position: absolute;
+	width: calc(100vw - 60px);
+	top: 80px;
+	left: 30px;
+	border: 1px blue solid;
+	z-index: 10;
+}
 
+.resultCard {
+	border: 1px solid gray;
+	background: yellow;
+	padding: 5px;
+	margin: 2px 5px;
+	color: #222;
+}
 
 
 

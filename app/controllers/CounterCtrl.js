@@ -13,6 +13,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 											{id: 6, name: "Ruth", result: 0.00},
 											{id: 7, name: "Wellington", result: 0.00}];
 	$scope.showAthleteList = true;
+	$scope.showResultList = false;
 
 	$scope.currentAthlete = {name: ""};
 	$scope.avgSecond = 0.00;
@@ -54,6 +55,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.showAthletes = () => {
 		counterDiv.classList.remove('animCounter');
+		$scope.showResultList = false;
 		$scope.showAthleteList = true;
 	}
 
@@ -71,4 +73,15 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 		$scope.avgSecond = 0.00;
 		$scope.avgRPM = 0;
 	}
+
+	$scope.showResults = () => {
+		counterDiv.classList.remove('animCounter');
+		$scope.showResultList ?
+			($scope.showAthleteList = true,
+				$scope.showResultList = false) : $scope.showResultList = true;
+		// $scope.showResultList = !$scope.showResultList;
+	}
+
+
+
 });

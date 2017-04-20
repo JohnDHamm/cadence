@@ -24,7 +24,7 @@
 	<div id="counterDivBG">
 	</div>
 
-	<div id="resultsDiv" class="">
+	<div id="resultsDiv" class="" ng-click="showResults()">
 		<span class="center-align">
 			<i class="material-icons btnIcon">list</i>
 		</span>
@@ -34,6 +34,13 @@
 		<div class="athleteCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}}
 		</div>
 	</div>
+
+	<div id="resultList" ng-show="showResultList">
+		<div class="resultCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.result}}s
+		</div>
+	</div>
+
+
 
 
 
