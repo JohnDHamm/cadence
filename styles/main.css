@@ -16,7 +16,7 @@
 	z-index: -10;
 }
 
-#groupDiv {
+#athletesBtn {
 	position: absolute;
 	top: 15px;
 	right: 15px;
@@ -104,7 +104,7 @@ p.name {
 	font-size: 1.5rem;
 }
 
-#resultsDiv {
+#resultsBtn {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -135,7 +135,7 @@ p.name {
 
 .listTitle {
 	padding: 5px;
-	color: #aaa;
+	color: #888;
 	font-size: 1.5rem;
 }
 
@@ -143,6 +143,7 @@ p.name {
 	padding: 5px;
 	color: #ddd;
 	font-size: 1.75rem;
+	margin-bottom: 0;
 }
 
 #listBG {
@@ -161,11 +162,16 @@ p.name {
 	width: calc(100vw - 40px);
 	top: 50px;
 	left: 20px;
-	z-index: 10;
+	z-index: 11;
+}
+
+.resultSpan {
+	font-size: 1.5rem;
+	color: #888;
 }
 
 #clearAllResults {
-	border: 1px #666 solid;
+	border: 1px #888 solid;
 	margin-top: 10px;
 }
 

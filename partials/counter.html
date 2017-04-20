@@ -1,6 +1,6 @@
-<div id="wholeScreen">
+<div id="wholeScreen" class="container">
 
-	<div id="groupDiv" class="" ng-click="showAthletes()">
+	<div id="athletesBtn" class="" ng-click="showAthletes()">
 		<i class="material-icons btnIcon">group</i>
 	</div>
 
@@ -22,7 +22,7 @@
 	<div id="counterDivBG">
 	</div>
 
-	<div id="resultsDiv" class="" ng-click="showResults()">
+	<div id="resultsBtn" class="" ng-click="showResults()">
 		<i class="material-icons btnIcon">list</i>
 	</div>
 
@@ -36,7 +36,13 @@
 	<div id="resultList" ng-show="showResultList">
 		<div class="listTitle light" layout="row" flex="90" flex-offset="5">results:
 		</div>
-		<div class="listCard light" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.resultSec}}s / {{athlete.resultRPM}}rpm
+		<div class="" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5">
+			<div class="row listCard light">
+				<div class="col s6 left-align">{{athlete.name}}
+				</div>
+				<div class="col s6 right-align">{{athlete.resultSec}}<span class="resultSpan">s/</span>{{athlete.resultRPM}}<span class="resultSpan">rpm</span>
+				</div>
+			</div>
 		</div>
 		<div id="clearAllResults" class="listTitle light center-align" layout="row" flex="90" flex-offset="5" ng-click="clearAllResults()">clear all
 		</div>
@@ -44,9 +50,7 @@
 
 	<div id="listBG"></div>
 
-
-	<div id="screenBG">
-	</div>
+	<div id="screenBG"></div>
 
 </div>
 

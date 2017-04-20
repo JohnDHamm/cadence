@@ -3,18 +3,16 @@
 app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	const counterDiv = document.getElementById('counterDiv');
-	const groupBtnDiv = document.getElementById('groupDiv');
-	const resultsBtnDiv = document.getElementById('resultsDiv');
 	const listBGDiv = document.getElementById('listBG');
 
-	$scope.athletes = [{id: 0, name: "CLARA", resultSec: 0.00},
-											{id: 1, name: "LUCY", resultSec: 0.00},
-											{id: 2, name: "MAKENNA", resultSec: 0.00},
-											{id: 3, name: "MAYA", resultSec: 0.00},
-											{id: 4, name: "MILES", resultSec: 0.00},
-											{id: 5, name: "TRINITY", resultSec: 0.00},
-											{id: 6, name: "RUTH", resultSec: 0.00},
-											{id: 7, name: "WELLINGTON", resultSec: 0.00}];
+	$scope.athletes = [{id: 0, name: "CLARA"},
+											{id: 1, name: "LUCY"},
+											{id: 2, name: "MAKENNA"},
+											{id: 3, name: "MAYA"},
+											{id: 4, name: "MILES"},
+											{id: 5, name: "TRINITY"},
+											{id: 6, name: "RUTH"},
+											{id: 7, name: "WELLINGTON"}];
 	$scope.showAthleteList = false;
 	$scope.showResultList = false;
 	$scope.readout = "tap to start";
@@ -33,7 +31,6 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 		let thisTap = CounterFactory.getTime();
 
 		if (prevTap === 0) {
-			// console.log("restarting for new athlete");
 			prevTap = thisTap;
 			latestTap = thisTap;
 			$scope.readout = "started..."
@@ -46,15 +43,13 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 			avgSecond = averages.avgSecond;
 			avgRPM = averages.avgRPM;
 			$scope.readout = `${avgSecond}s / ${avgRPM}rpm`;
-			$scope.athletes[$scope.currentAthlete.id].resultSec = avgSecond;  //save last resultSec
-			$scope.athletes[$scope.currentAthlete.id].resultRPM = avgRPM;  //save last resultSec
-			// console.log("last resultSec", $scope.athletes[$scope.currentAthlete.id].resultSec);
+			$scope.athletes[$scope.currentAthlete.id].resultSec = avgSecond;
+			$scope.athletes[$scope.currentAthlete.id].resultRPM = avgRPM;
 		}
 	}
 
 	const calcAverages = () => {
 		const sum = intervals.reduce((a, b) => a + b);
-		// $scope.athletes[]
 		return { avgSecond: (sum / intervals.length).toFixed(2),
 						avgRPM: Math.floor(60 / (sum / intervals.length))
 					};
@@ -63,15 +58,12 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 	$scope.showAthletes = () => {
 		counterDiv.classList.remove('animCounter');
 		listBGDiv.style.background = "rgba(55, 0, 0, 0.8)"
-		// groupBtnDiv.classList.add('btnSelected');
-		// resultsBtnDiv.classList.remove('btnSelected');
 		listBGDiv.style.display = "block";
 		$scope.showResultList = false;
 		$scope.showAthleteList = true;
 	}
 
 	$scope.selectAthlete = (index) => {
-		// groupBtnDiv.classList.remove('btnSelected');
 		listBGDiv.style.display = "none";
 		clearCounter(index);
 		$scope.currentAthlete = $scope.athletes[index];
@@ -106,7 +98,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.clearAllResults = () => {
 		for (let i = 0; i < $scope.athletes.length; i++){
-			$scope.athletes[i].resultSec = 0.00;
+			$scope.athletes[i].resultSec = 0;
 			$scope.athletes[i].resultRPM = 0;
 		}
 	}
