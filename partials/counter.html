@@ -1,48 +1,52 @@
-
 <div id="wholeScreen">
 
-	<div id="screenBG">
-	</div>
-
 	<div id="groupDiv" class="" ng-click="showAthletes()">
-		<span class="center-align">
-			<i class="material-icons btnIcon">group</i>
-		</span>
+		<i class="material-icons btnIcon">group</i>
 	</div>
 
 	<div id="counterDiv" ng-click="clicked()">
 	</div>
 
 	<div id="athleteName">
-		<p class="name center-align">{{currentAthlete.name}}</p>
+		<p class="name center-align light">{{currentAthlete.name}}</p>
 	</div>
 
 	<div id="cadenceValues">
-		<h4 id="readoutText" class="readout center-align">{{avgSecond}}s / {{avgRPM}} rpm</h4>
+		<h4 id="readoutText" class="readout center-align light">{{avgSecond}}s / {{avgRPM}} rpm</h4>
+	</div>
+
+	<div id="stopCounterBtn" ng-click="resetCounter()">
+		<i class="material-icons stopIcon">highlight_off</i>
 	</div>
 
 	<div id="counterDivBG">
 	</div>
 
 	<div id="resultsDiv" class="" ng-click="showResults()">
-		<span class="center-align">
-			<i class="material-icons btnIcon">list</i>
-		</span>
+		<i class="material-icons btnIcon">list</i>
 	</div>
 
 	<div id="athleteList" ng-show="showAthleteList">
-		<div class="athleteCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}}
+		<div class="listTitle light" layout="row" flex="90" flex-offset="5">select athlete:
+		</div>
+		<div class="listCard light" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}}
 		</div>
 	</div>
 
 	<div id="resultList" ng-show="showResultList">
-		<div class="resultCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.result}}s
+		<div class="listTitle light" layout="row" flex="90" flex-offset="5">results:
+		</div>
+		<div class="listCard light" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.result}}s
+		</div>
+		<div id="clearAllResults" class="listTitle light center-align" layout="row" flex="90" flex-offset="5" ng-click="clearAllResults()">clear all
 		</div>
 	</div>
 
+	<div id="listBG"></div>
 
 
-
+	<div id="screenBG">
+	</div>
 
 </div>
 

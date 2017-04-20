@@ -12,24 +12,29 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/*background: #222;*/
-	z-index: -2;
+	background: #222;
+	z-index: -10;
 }
 
 #groupDiv {
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	background: red;
+	background: #600;
 	width: 50px;
 	height: 50px;
-	border-radius: 50%
+	border-radius: 50%;
+	z-index: 9;
 }
 
 .btnIcon {
 	color: white;
-	/*text-align: center;*/
-	font-size: 3rem;
+	font-size: 30px;
+	padding: 10px;
+}
+
+.btnSelected {
+	border: 1px solid white;
 }
 
 #counterDivBG {
@@ -52,19 +57,38 @@
 	width: calc(100vw - 30px);
 	height: calc(100vw - 30px);
 	border-radius: 50%;
-	z-index: 8;
+	z-index: 6;
 }
 
 #cadenceValues {
 	position: absolute;
-	top: 45%;
+	top: 46%;
 	left: 0;
 	width: 100%;
+	z-index: 4;
+}
+
+#stopCounterBtn {
+	position: absolute;
+	top: calc(50vh + (50vw - 30px) + 50px);
+	left: calc(50% - 20px);
+	/*background: red;*/
+	width: 40px;
+	height: 40px;
+	border-radius: 50%
+	z-index: 6;
+}
+
+.stopIcon {
+	color: #444;
+	font-size: 40px;
+	/*padding: 5px;*/
 }
 
 h4.readout {
 	margin: 0;
 	color: #fff;
+	font-size: 2.5rem;
 }
 
 #athleteName {
@@ -72,21 +96,23 @@ h4.readout {
 	top: 35%;
 	left: 0;
 	width: 100%;
+	z-index: 4;
 }
 
 p.name {
-	color: yellow;
-	font-size: 1.2rem;
+	color: #e2bb2d;
+	font-size: 1.5rem;
 }
 
 #resultsDiv {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
-	background: blue;
+	background: #006;
 	width: 50px;
 	height: 50px;
-	border-radius: 50%
+	border-radius: 50%;
+	z-index: 9;
 }
 
 .animCounter {
@@ -99,44 +125,49 @@ p.name {
 }
 
 /*ATHLETE LIST*/
-
 #athleteList {
 	position: absolute;
-	width: calc(100vw - 60px);
+	width: calc(100vw - 80px);
 	top: 80px;
-	left: 30px;
-	border: 1px red solid;
+	left: 40px;
 	z-index: 10;
 }
 
-.athleteCard {
-	border: 1px solid gray;
-	background: #ddd;
+.listTitle {
 	padding: 5px;
-	margin: 2px 5px;
-	color: #222;
+	color: #aaa;
+	font-size: 1.5rem;
 }
 
+.listCard {
+	padding: 5px;
+	color: #ddd;
+	font-size: 1.75rem;
+}
 
+#listBG {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	top: 0;
+	left: 0;
+	display: none;
+}
 
 /*RESULTS*/
 #resultList {
 	position: absolute;
-	width: calc(100vw - 60px);
-	top: 80px;
-	left: 30px;
-	border: 1px blue solid;
+	width: calc(100vw - 80px);
+	top: 50px;
+	left: 40px;
 	z-index: 10;
 }
 
-.resultCard {
-	border: 1px solid gray;
-	background: yellow;
-	padding: 5px;
-	margin: 2px 5px;
-	color: #222;
+#clearAllResults {
+	border: 1px #666 solid;
+	margin-top: 10px;
 }
-
 
 
 
