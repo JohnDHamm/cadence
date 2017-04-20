@@ -4,9 +4,9 @@
 	<div id="screenBG">
 	</div>
 
-	<div id="groupDiv" class="">
+	<div id="groupDiv" class="" ng-click="showAthletes()">
 		<span class="center-align">
-			<i class="material-icons groupIcon">group</i>
+			<i class="material-icons btnIcon">group</i>
 		</span>
 	</div>
 
@@ -26,11 +26,14 @@
 
 	<div id="resultsDiv" class="">
 		<span class="center-align">
-			<i class="material-icons groupIcon">list</i>
+			<i class="material-icons btnIcon">list</i>
 		</span>
 	</div>
 
-
+	<div id="athleteList" ng-show="showAthleteList">
+		<div class="athleteCard" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete)">{{athlete}}
+		</div>
+	</div>
 
 
 
