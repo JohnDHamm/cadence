@@ -4,7 +4,7 @@
 		<i class="material-icons btnIcon">group</i>
 	</div>
 
-	<div id="counterDiv" ng-click="clicked()">
+	<div id="counterDiv" ng-click="tapped()">
 	</div>
 
 	<div id="athleteName">
@@ -12,7 +12,7 @@
 	</div>
 
 	<div id="cadenceValues">
-		<h4 id="readoutText" class="readout center-align light">{{avgSecond}}s / {{avgRPM}} rpm</h4>
+		<h4 id="readoutText" class="readout center-align light">{{readout}}</h4>
 	</div>
 
 	<div id="stopCounterBtn" ng-click="resetCounter()">
@@ -36,7 +36,7 @@
 	<div id="resultList" ng-show="showResultList">
 		<div class="listTitle light" layout="row" flex="90" flex-offset="5">results:
 		</div>
-		<div class="listCard light" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.result}}s
+		<div class="listCard light" ng-repeat="athlete in athletes" layout="row" flex="90" flex-offset="5" ng-click="selectAthlete(athlete.id)">{{athlete.name}} : {{athlete.resultSec}}s / {{athlete.resultRPM}}rpm
 		</div>
 		<div id="clearAllResults" class="listTitle light center-align" layout="row" flex="90" flex-offset="5" ng-click="clearAllResults()">clear all
 		</div>

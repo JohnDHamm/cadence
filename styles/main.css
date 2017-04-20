@@ -158,9 +158,9 @@ p.name {
 /*RESULTS*/
 #resultList {
 	position: absolute;
-	width: calc(100vw - 80px);
+	width: calc(100vw - 40px);
 	top: 50px;
-	left: 40px;
+	left: 20px;
 	z-index: 10;
 }
 
