@@ -2,6 +2,10 @@
 
 app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
+	const readout = document.getElementById('readoutText');
+	const counterDiv = document.getElementById('counterDiv');
+	console.log("counterDiv", counterDiv);
+
 	$scope.currentAthlete = "Wellington";
 	$scope.avgSecond = '0.00';
 	let prevTap = 0,
@@ -10,6 +14,9 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 	$scope.avgRPM = 0;
 
 	$scope.clicked = () => {
+		counterDiv.classList.add('animCounter');
+		console.log("counterDiv", counterDiv);
+
 		let thisTap = CounterFactory.getTime();
 		if (prevTap === 0) {
 			prevTap = thisTap;

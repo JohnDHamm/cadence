@@ -1,15 +1,23 @@
 #wholeScreen {
-	/*border: 1px gray solid;*/
-	width: calc(100vw - 20px);
-	height: calc(100vh - 20px);
+	width: calc(100vw);
+	height: calc(100vh);
 	position: relative;
-	margin: 10px;
+}
+
+#screenBG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	z-index: -2;
 }
 
 #groupDiv {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 15px;
+	right: 15px;
 	background: red;
 	width: 50px;
 	height: 50px;
@@ -25,8 +33,8 @@
 #counterDivBG {
 	position: absolute;
 	top: calc(50% - 50vw + 10px);
-	left: 5px;
-	background: black;
+	left: 15px;
+	background: #000;
 	width: calc(100vw - 30px);
 	height: calc(100vw - 30px);
 	border-radius: 50%;
@@ -36,9 +44,9 @@
 #counterDiv {
 	position: absolute;
 	top: calc(50% - 50vw + 10px);
-	left: 5px;
+	left: 15px;
 	background: transparent;
-	border: 1px red solid;
+	border: 2px #444 solid;
 	width: calc(100vw - 30px);
 	height: calc(100vw - 30px);
 	border-radius: 50%;
@@ -71,11 +79,20 @@ p.name {
 
 #resultsDiv {
 	position: absolute;
-	bottom: 5px;
-	right: 5px;
+	bottom: 15px;
+	right: 15px;
 	background: blue;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%
+}
+
+.animCounter {
+	animation: colorBorderCycle 0.5s infinite alternate;
+}
+
+@keyframes colorBorderCycle {
+	from {border: 2px red solid;}
+	to {border: 2px yellow solid;}
 }
 
