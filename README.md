@@ -9,6 +9,6 @@ Designed for mobile use for the coaches of the AERO youth triathlon team during 
 * NodeJS
 * ExpressJS
 
-Deployment: http:aerocadence.herokuapp.com
+Deployment: https://aerocadence.herokuapp.com
 
 
