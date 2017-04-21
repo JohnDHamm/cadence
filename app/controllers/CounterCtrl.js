@@ -77,8 +77,9 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 	}
 
 	const clearCounter = (index) => {
-		$scope.athletes[index].resultSec = 0.00;  //clear resultSec
-		prevTap = 0; //clear counter
+		$scope.athletes[index].resultSec = 0;
+		$scope.athletes[index].resultRPM = 0;
+		prevTap = 0;
 		intervals = [];
 		avgSecond = 0.00;
 		avgRPM = 0;
