@@ -57,7 +57,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.showAthletes = () => {
 		counterDiv.classList.remove('animCounter');
-		listBGDiv.style.background = "rgba(55, 0, 0, 0.8)"
+		listBGDiv.style.background = "rgba(55, 0, 0, 0.85)"
 		listBGDiv.style.display = "block";
 		$scope.showResultList = false;
 		$scope.showAthleteList = true;
@@ -93,7 +93,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 			($scope.showResultList = true,
 				$scope.showAthleteList = false,
 				listBGDiv.style.display = "block",
-				listBGDiv.style.background = "rgba(0, 0, 55, 0.8)"
+				listBGDiv.style.background = "rgba(0, 0, 55, 0.85)"
 				);
 	}
 
