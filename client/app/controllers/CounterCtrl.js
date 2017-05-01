@@ -4,6 +4,8 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	const counterDiv = document.getElementById('counterDiv');
 	const listBGDiv = document.getElementById('listBG');
+	const athletesBtn = document.getElementById('athletesBtn');
+	const resultsBtn = document.getElementById('resultsBtn');
 
 	$scope.athletes = [{id: 0, name: "CLARA"},
 											{id: 1, name: "LUCY"},
@@ -57,6 +59,8 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.showAthletes = () => {
 		counterDiv.classList.remove('animCounter');
+		resultsBtn.classList.remove('glow');
+		athletesBtn.classList.add('glow');
 		listBGDiv.style.background = "rgba(55, 0, 0, 0.85)"
 		listBGDiv.style.display = "block";
 		$scope.showResultList = false;
@@ -69,6 +73,7 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 		$scope.currentAthlete = $scope.athletes[index];
 		$scope.avgSecond = $scope.athletes[index].resultSec.toFixed(2);
 		$scope.showAthleteList = false;
+		athletesBtn.classList.remove('glow');
 	}
 
 	$scope.resetCounter = () => {
@@ -88,6 +93,8 @@ app.controller("CounterCtrl", function($scope, CounterFactory, $location){
 
 	$scope.showResults = () => {
 		counterDiv.classList.remove('animCounter');
+		resultsBtn.classList.add('glow');
+		athletesBtn.classList.remove('glow');
 		$scope.showResultList ? $scope.showAthletes()
 			:
 			($scope.showResultList = true,
